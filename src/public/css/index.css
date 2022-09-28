@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 300vh;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.home{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img{
+    width: 500px;
+    margin: 10px;
+}
+
+h1{
+    font-size: 200px;
+}
+
+.btn{
+    width: 200px;
+    height: auto;
+    padding: 5px;
+    background-color: white;
+    color: gray;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 30px;
+    margin: 10px;
+    border: 2px solid gray;
+    text-decoration: none;
+    transition: all .15s linear;
+}
+
+.btn:hover{
+    color: #fff;
+    border: 5px solid #fff;
+    width: 250px;
+    padding: 10px;
+}
+
+#login:hover{
+    background-color: orange;
+}
+
+#sign:hover{
+    background-color: royalblue;
+}
+
+.login{
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 200px;
+}
+
+
+
+.sign{
+    position: absolute;
+    top: 200vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 200px;
+}
+
+#loginContainer h1{
+    color: orange;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif 
+}
+
+#signContainer h1{
+    color: royalblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif 
+}
+
+#loginForm{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#signForm{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+button{
+    width: 50%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 30px;
+    border: 2px solid gray;
+}
+
+#loginForm input{
+    color: orange;
+}
+
+#signForm input{
+    color: royalblue;
+}
+
+#btnLogin,
+#btnSign{
+    font-size: 16px;
+    cursor: pointer;
+    color: gray;
+    transition: all .15s linear;
+}
+
+#btnLogin:hover{
+    color: #fff;
+    background-color: orange;
+    border: 2px solid #fff;
+}
+
+#btnSign:hover{
+    color: #fff;
+    background-color: royalblue;
+    border: 2px solid #fff;
+}
+
+@media screen and (max-width: 700px) {
+    img{
+        width: 300px;
+    }
+
+    h1{
+        font-size: 100px;
+    }
+}

@@ -1,0 +1,21 @@
+include templates/header.pug
+
+div.home
+    img(src="./images/GoodPet.png", alt="logo")
+    a#login.btn(href="#loginContainer") Login
+    a#sign.btn(href="#signContainer") Sign
+
+div#loginContainer.login
+    form#loginForm()
+        h1 LOGIN
+        input(type="text" placeholder="Username" id="usernameLogin")
+        input(type="password" placeholder="Password")
+        button#btnLogin(type="button") Login
+
+form(action="/api/users" method="post")#signContainer.sign
+    form#signForm
+        h1 SIGN
+        input(type="text" placeholder="Username" id="name")
+        input(type="mail" placeholder="E-mail" id="mail")
+        input(type="password" placeholder="Password" id="password")
+        button#btnSign(type="submit") Sign
