@@ -1,12 +1,19 @@
 import { Router } from 'express'
-import { addUser, deleteUser, updateUser, getAllUsers, getUser } from '../controllers/users.controller.js'
+import { addUser, deleteUser, updateUser, getAllUsers, getUser, getUserById, renderProfile } from '../controllers/users.controller.js'
 
 const router = Router()
 
 //GET - recibir
 router.get('/users', getAllUsers)
 
-router.get('/users/:id', getUser)
+//POST - recibir login
+router.post('/userIn', getUser)
+
+//GET - recibir id
+router.get('/userId/:id', getUserById)
+
+//GET - enviar a perfil
+router.get('/pro/:id', renderProfile)
 
 //POST - enviar
 router.post('/users', addUser)

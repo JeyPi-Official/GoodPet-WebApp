@@ -5,24 +5,24 @@ import indexRoutes from './routes/index.routes.js'
 import viewsRoutes from './routes/views.routes.js'
 
 import path from 'path'
-import {fileURLToPath} from 'url'
+import { fileURLToPath } from 'url'
 
 const app = express()
 const port = process.env.port || 3000
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-app.use(express.json())
-
 //To use PUG view engine
 app.set('view engine', 'pug')
-app.set('views', './src/public/views')
-app.use(express.urlencoded({ extended: true }))
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Static route
-app.use(express.static(__dirname + '/public'))
-
+// app.use(express.static(__dirname + '/public'))
+app.set('views', './src/public/views')
 
 //To use the routers
 app.use(indexRoutes)

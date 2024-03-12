@@ -1,21 +1,27 @@
 include templates/header.pug
 
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
 div.home
     img(src="./images/GoodPet.png", alt="logo")
     a#login.btn(href="#loginContainer") Login
     a#sign.btn(href="#signContainer") Sign
 
-div#loginContainer.login
-    form#loginForm()
+form(action="/api/userIn" method="post")#loginContainer.login
+    form#loginForm
         h1 LOGIN
-        input(type="text" placeholder="Username" id="usernameLogin")
-        input(type="password" placeholder="Password")
-        button#btnLogin(type="button") Login
+        input(type="text" placeholder="Username" id="usernameLogin" name="name")
+        input(type="password" placeholder="Password" name="password")
+        button#btnLogin(type="submit") Login
 
 form(action="/api/users" method="post")#signContainer.sign
     form#signForm
         h1 SIGN
-        input(type="text" placeholder="Username" id="name")
-        input(type="mail" placeholder="E-mail" id="mail")
-        input(type="password" placeholder="Password" id="password")
+        input(type="text" placeholder="name" id="name" name="name")
+        input(type="mail" placeholder="mail" id="mail" name="mail")
+        input(type="password" placeholder="password" id="password" name="password")
         button#btnSign(type="submit") Sign
